@@ -12,3 +12,4 @@ while True:
     if user_input.lower() in ["exit", "quit"]:
         print("Goodbye! Have a great day!")
         break
+    print(f"You said: '{user_input}'")

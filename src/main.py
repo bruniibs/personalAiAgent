@@ -12,4 +12,6 @@ while True:
     if user_input.lower() in ["exit", "quit"]:
         print("Goodbye! Have a great day!")
         break
+    elif user_input.lower() in ["help"]:
+        print("Available commands: \n- help\n- exit/quit")
     print(f"You said: '{user_input}'")

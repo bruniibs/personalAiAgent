@@ -8,10 +8,11 @@ if not name:
 print(f"Hello, {name}!\nHow could I assist you today?")
 
 while True:
-    user_input = input("> ")
+    user_input = input("> ").strip()
     if user_input.lower() in ["exit", "quit"]:
         print("Goodbye! Have a great day!")
         break
-    elif user_input.lower() in ["help"]:
-        print("Available commands: \n- help\n- exit/quit")
     print(f"You said: '{user_input}'")
+    elif user_input.lower() == "help":
+        print("Available commands: \n- help\n- exit/quit")
+        continue

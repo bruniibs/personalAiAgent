@@ -7,9 +7,16 @@ if not name:
     name = "Miss"
 print(f"Hello, {name}!\nHow could I assist you today?")
 
+# loop for user commands. ignores empty commands requiring an actual input suggesting help
 while True:
-    user_input = input("> ")
-    if user_input.lower() in ["exit", "quit"]:
+    user_input = input("> ").strip()
+    if user_input == "":
+        print("Please enter a command or type 'help' for assistance.")
+        continue
+    elif user_input.lower() in ["exit", "quit"]:
         print("Goodbye! Have a great day!")
         break
-    print(f"You said: '{user_input}'")
+    elif user_input.lower() == "help":
+        print("Available commands: \n- help\n- exit/quit")
+    else:
+        print(f"You said: '{user_input}'")
